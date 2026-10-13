@@ -30,6 +30,8 @@ function tambahSuka() {
 }
 tombolSuka.addEventListener("click", tambahSuka)
 
+
+
 // =========================
 // BLOK 2: BACA SELENGKAPNYA
 // =========================
@@ -48,21 +50,61 @@ function bukaTutup() {
 
 tombolBaca.addEventListener("click", bukaTutup);
 
+//===Bagian C: Tombol Suka (BLOK 1, versi 1 kartu)===
+// let jumlahSuka = 0;
+// const tombolSuka = document.querySelector(".btn-suka");
+// const teksSuka = document.querySelector(".jumlah-suka");
+//
+// function tambahSuka() {
+//   jumlahSuka = jumlahSuka + 1;
+//   teksSuka.textContent = jumlahSuka;
+// }
+//
+// tombolSuka.addEventListener("click", tambahSuka);
 
-// BLOK 3: MODE GELAP
-const tombolGelap = document.querySelector("#tombol-gelap");
+//===Bagian D: Baca Selengkapnya (BLOK 2, versi 1 kartu)===
+// const tombolBaca = document.querySelector(".btn-baca");
+// const teksLengkap = document.querySelector(".selengkapnya");
+//
+// function bukaTutup() {
+//   teksLengkap.classList.toggle("sembunyi");
+//
+//   if (teksLengkap.classList.contains("sembunyi")) {
+//     tombolBaca.textContent = "Baca selengkapnya";
+//   } else {
+//     tombolBaca.textContent = "Tutup";
+//   }
+// }
+//
+// tombolBaca.addEventListener("click", bukaTutup);
 
-function gantiMode() {
-    document.body.classList.toggle("gelap");
-    if (document.body.classList.contains("gelap")) {
-        tombolGelap.textContent = "Mode Terang";
-    } else {
-        tombolGelap.textContent = "Mode Gelap";
+//===Bagian D: Mode Gelap (BLOK 3)===
+/// BLOK 3: MODE GELAP
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const tombolGelap = document.getElementById("tombol-gelap");
+
+    if (!tombolGelap) {
+        console.error("Tombol dengan id 'tombol-gelap' tidak ditemukan.");
+        return;
     }
-}
 
-tombolGelap.addEventListener("click", gantiMode);
+    tombolGelap.addEventListener("click", function () {
 
+        // Aktif/nonaktif mode gelap
+        document.body.classList.toggle("dark");
+
+        // Ubah tulisan tombol
+        if (document.body.classList.contains("dark")) {
+            tombolGelap.textContent = "Mode Terang";
+        } else {
+            tombolGelap.textContent = "Mode Gelap";
+        }
+
+    });
+
+});
 const daftar = ["Elang", "Kura-kura", "Kucing"];
 daftar[0]
 daftar.length
@@ -80,10 +122,6 @@ semuaKartu.forEach(function (kartu){
         teksSuka.textContent = jumlahSuka;
     })
 })
-
-const kontak = document.querySelector("footer h2");
-kontak.textContent = "Hubungi Kami"
-
 // const judul =
 // document.getElementById('judul');
 // judul.style.backgroundColor = 'teal';

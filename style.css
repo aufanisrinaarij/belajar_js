@@ -1,0 +1,1021 @@
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f8f5;
+  color: #26352b;
+  line-height: 1.6;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+#judul {
+  background: linear-gradient(
+    135deg,
+    #336e51,
+    #4d8968
+  );
+
+  color: white;
+  text-align: center;
+
+  padding: 25px 20px 20px;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.15);
+
+  position: relative;
+  z-index: 10;
+}
+
+#judul h1 {
+  font-size: 20px;
+  background-color: rgb(51, 110, 81);
+
+  display: inline-block;
+
+  padding: 10px 25px;
+  margin-bottom: 18px;
+
+  border-radius: 10px;
+
+  letter-spacing: 0.5px;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   NAVIGASI
+   ========================================================= */
+
+#navigasi {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+}
+
+#navigasi a {
+  color: white;
+  text-decoration: none;
+
+  font-weight: bold;
+  font-size: 14px;
+
+  padding: 8px 15px;
+
+  border-radius: 20px;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+#navigasi a:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+
+  transform: translateY(-2px);
+}
+
+#navigasi a:active {
+  transform: scale(0.96);
+}
+
+
+/* =========================================================
+   TOMBOL MODE GELAP
+   ========================================================= */
+
+#tombol-gelap {
+  border: none;
+
+  background-color: white;
+  color: #336e51;
+
+  padding: 9px 16px;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.12);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#tombol-gelap:hover {
+  background-color: #e7f0ea;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 4px 9px rgba(0, 0, 0, 0.15);
+}
+
+#tombol-gelap:active {
+  transform: scale(0.95);
+}
+
+#tombol-gelap:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.4);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+main {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 30px auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    280px;
+
+  gap: 25px;
+}
+
+
+/* =========================================================
+   JENIS HEWAN
+   ========================================================= */
+
+#jenis {
+  width: 100%;
+}
+
+#jenis h2,
+aside h2,
+#Tentang h2 {
+  color: #336e51;
+
+  font-size: 24px;
+
+  margin-bottom: 18px;
+
+  position: relative;
+}
+
+#jenis h2::after,
+aside h2::after,
+#Tentang h2::after {
+  content: "";
+
+  display: block;
+
+  width: 45px;
+  height: 3px;
+
+  background-color: #4d8968;
+
+  border-radius: 5px;
+
+  margin-top: 6px;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+#cari {
+  width: 100%;
+
+  padding: 13px 17px;
+
+  margin-bottom: 22px;
+
+  border: 2px solid #d5e3da;
+
+  border-radius: 12px;
+
+  background-color: white;
+
+  color: #26352b;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+#cari::placeholder {
+  color: #8a9b90;
+}
+
+#cari:focus {
+  border-color: #336e51;
+
+  box-shadow:
+    0 0 0 4px rgba(51, 110, 81, 0.12);
+}
+
+
+/* =========================================================
+   ARTICLE / KARTU HEWAN
+   ========================================================= */
+
+article {
+  background-color: white;
+
+  padding: 22px;
+
+  margin-bottom: 25px;
+
+  border-radius: 16px;
+
+  border: 1px solid #e0ebe4;
+
+  box-shadow:
+    0 4px 15px rgba(51, 110, 81, 0.10);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+article:hover {
+  transform: translateY(-4px);
+
+  border-color: #c5dacf;
+
+  box-shadow:
+    0 9px 25px rgba(51, 110, 81, 0.16);
+}
+
+article h3 {
+  color: #336e51;
+
+  font-size: 21px;
+
+  margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   GAMBAR
+   ========================================================= */
+
+figure {
+  margin-bottom: 18px;
+}
+
+figure img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-height: 350px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  border: 3px solid #e0ebe4;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+figure img:hover {
+  transform: scale(1.01);
+}
+
+figcaption {
+  color: #6d7d72;
+
+  font-size: 13px;
+
+  font-style: italic;
+
+  margin-top: 8px;
+
+  padding-left: 3px;
+}
+
+
+/* =========================================================
+   TEKS ARTICLE
+   ========================================================= */
+
+article p {
+  color: #405047;
+
+  font-size: 15px;
+
+  margin-bottom: 15px;
+}
+
+.selengkapnya {
+  background-color: #f0f6f2;
+
+  padding: 13px 15px;
+
+  border-left: 4px solid #336e51;
+
+  border-radius: 8px;
+}
+
+.sembunyi {
+  display: none;
+}
+
+
+/* =========================================================
+   BAGIAN AKSI
+   ========================================================= */
+
+.aksi {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  margin-top: 18px;
+  padding-top: 15px;
+
+  border-top: 1px solid #e1e9e4;
+}
+
+.aksi button {
+  border: none;
+
+  padding: 9px 14px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Tombol suka */
+
+.btn-suka {
+  background-color: #e7f1ea;
+
+  color: #336e51;
+}
+
+.btn-suka:hover {
+  background-color: #d2e5d8;
+
+  transform: translateY(-2px);
+}
+
+.btn-suka:active {
+  transform: scale(0.95);
+}
+
+
+/* Tombol baca */
+
+.btn-baca {
+  background-color: #336e51;
+
+  color: white;
+
+  margin-left: auto;
+}
+
+.btn-baca:hover {
+  background-color: #285a41;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 4px 8px rgba(51, 110, 81, 0.2);
+}
+
+.btn-baca:active {
+  transform: scale(0.95);
+}
+
+
+/* Jumlah suka */
+
+.aksi span {
+  color: #6c7b71;
+
+  font-size: 14px;
+}
+
+.jumlah-suka {
+  color: #336e51;
+}
+
+
+/* =========================================================
+   SIDEBAR / ASIDE
+   ========================================================= */
+
+aside {
+  height: fit-content;
+
+  background-color: white;
+
+  padding: 22px;
+
+  border-radius: 16px;
+
+  border: 1px solid #e0ebe4;
+
+  box-shadow:
+    0 4px 15px rgba(51, 110, 81, 0.10);
+
+  position: sticky;
+
+  top: 20px;
+
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+aside h2 {
+  font-size: 20px;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside li {
+  margin-bottom: 10px;
+}
+
+aside li:last-child {
+  margin-bottom: 0;
+}
+
+aside a {
+  display: block;
+
+  color: #405047;
+
+  text-decoration: none;
+
+  background-color: #f0f6f2;
+
+  padding: 10px 12px;
+
+  border-radius: 9px;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+aside a:hover {
+  background-color: #dcebe1;
+
+  color: #336e51;
+
+  padding-left: 17px;
+}
+
+
+/* =========================================================
+   TENTANG
+   ========================================================= */
+
+#Tentang {
+  grid-column: 1 / -1;
+
+  background-color: white;
+
+  padding: 25px;
+
+  border-radius: 16px;
+
+  border: 1px solid #e0ebe4;
+
+  box-shadow:
+    0 4px 15px rgba(51, 110, 81, 0.10);
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+#Tentang h2 {
+  font-size: 22px;
+}
+
+#Tentang p {
+  color: #405047;
+
+  margin-bottom: 12px;
+}
+
+.wrapper {
+  background-color: #f0f6f2;
+
+  padding: 17px;
+
+  border-left: 5px solid #336e51;
+
+  border-radius: 10px;
+
+  margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+#kontak {
+  background: linear-gradient(
+    135deg,
+    #336e51,
+    #4d8968
+  );
+
+  color: white;
+
+  text-align: center;
+
+  padding: 30px 20px;
+
+  margin-top: 35px;
+}
+
+#kontak h2 {
+  color: white;
+
+  font-size: 22px;
+
+  margin-bottom: 15px;
+}
+
+.alamat {
+  font-style: normal;
+
+  line-height: 1.8;
+
+  margin-bottom: 15px;
+}
+
+.alamat a {
+  color: white;
+
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+.alamat a:hover {
+  text-decoration: underline;
+}
+
+#kontak p {
+  font-size: 14px;
+
+  opacity: 0.9;
+}
+
+
+/* =========================================================
+   MODE GELAP
+   SESUAI DENGAN JAVASCRIPT: body.gelap
+   ========================================================= */
+
+body.gelap {
+  background-color: #17231c;
+
+  color: #e7eee9;
+}
+
+
+/* Header */
+
+body.gelap #judul {
+  background: linear-gradient(
+    135deg,
+    #234b38,
+    #336e51
+  );
+}
+
+body.gelap #judul h1 {
+  background-color: #234b38;
+}
+
+
+/* Tombol mode */
+
+body.gelap #tombol-gelap {
+  background-color: #e7eee9;
+
+  color: #234b38;
+}
+
+body.gelap #tombol-gelap:hover {
+  background-color: #d3dfd7;
+}
+
+
+/* Judul */
+
+body.gelap #jenis h2,
+body.gelap aside h2,
+body.gelap #Tentang h2 {
+  color: #9bc5aa;
+}
+
+body.gelap #jenis h2::after,
+body.gelap aside h2::after,
+body.gelap #Tentang h2::after {
+  background-color: #80b591;
+}
+
+
+/* Search */
+
+body.gelap #cari {
+  background-color: #1d2b23;
+
+  color: #e7eee9;
+
+  border-color: #405548;
+}
+
+body.gelap #cari::placeholder {
+  color: #8fa297;
+}
+
+body.gelap #cari:focus {
+  border-color: #80b591;
+
+  box-shadow:
+    0 0 0 4px rgba(128, 181, 145, 0.12);
+}
+
+
+/* Card */
+
+body.gelap article,
+body.gelap aside,
+body.gelap #Tentang {
+  background-color: #223129;
+
+  border-color: #34493c;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.25);
+}
+
+body.gelap article:hover {
+  border-color: #496252;
+}
+
+body.gelap article h3 {
+  color: #9bc5aa;
+}
+
+body.gelap article p {
+  color: #d0ddd4;
+}
+
+
+/* Gambar */
+
+body.gelap figure img {
+  border-color: #34493c;
+}
+
+
+/* Caption */
+
+body.gelap figcaption {
+  color: #aebdb4;
+}
+
+
+/* Selengkapnya */
+
+body.gelap .selengkapnya {
+  background-color: #1c2a22;
+
+  border-left-color: #80b591;
+}
+
+
+/* Aksi */
+
+body.gelap .aksi {
+  border-top-color: #3a4b41;
+}
+
+body.gelap .aksi span {
+  color: #aebdb4;
+}
+
+body.gelap .jumlah-suka {
+  color: #9bc5aa;
+}
+
+
+/* Tombol suka */
+
+body.gelap .btn-suka {
+  background-color: #304438;
+
+  color: #a9cbb3;
+}
+
+body.gelap .btn-suka:hover {
+  background-color: #3b5144;
+}
+
+
+/* Tombol baca */
+
+body.gelap .btn-baca {
+  background-color: #4d8968;
+}
+
+body.gelap .btn-baca:hover {
+  background-color: #5b9977;
+}
+
+
+/* Sidebar */
+
+body.gelap aside a {
+  background-color: #1c2a22;
+
+  color: #d0ddd4;
+}
+
+body.gelap aside a:hover {
+  background-color: #304438;
+
+  color: #9bc5aa;
+}
+
+
+/* Tentang */
+
+body.gelap #Tentang p {
+  color: #d0ddd4;
+}
+
+body.gelap .wrapper {
+  background-color: #1c2a22;
+
+  border-left-color: #80b591;
+}
+
+
+/* Footer */
+
+body.gelap #kontak {
+  background: linear-gradient(
+    135deg,
+    #234b38,
+    #336e51
+  );
+}
+
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+   ========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid #80b591;
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   ANIMASI
+   ========================================================= */
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+article {
+  animation: muncul 0.5s ease;
+}
+
+aside {
+  animation: muncul 0.6s ease;
+}
+
+#Tentang {
+  animation: muncul 0.7s ease;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    position: static;
+  }
+
+  #Tentang {
+    grid-column: auto;
+  }
+
+}
+
+
+/* =========================================================
+   HP
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  #judul {
+    padding: 20px 15px;
+  }
+
+  #judul h1 {
+    font-size: 18px;
+
+    padding: 9px 18px;
+  }
+
+  #navigasi {
+    gap: 5px;
+  }
+
+  #navigasi a,
+  #tombol-gelap {
+    font-size: 12px;
+
+    padding: 7px 10px;
+  }
+
+  main {
+    width: 94%;
+
+    margin: 20px auto;
+
+    gap: 18px;
+  }
+
+  #jenis h2,
+  aside h2,
+  #Tentang h2 {
+    font-size: 20px;
+  }
+
+  article {
+    padding: 17px;
+
+    border-radius: 13px;
+  }
+
+  article h3 {
+    font-size: 18px;
+  }
+
+  article p {
+    font-size: 14px;
+  }
+
+  figure img {
+    max-height: 250px;
+  }
+
+  figcaption {
+    font-size: 12px;
+  }
+
+  .aksi {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .aksi button {
+    width: 100%;
+  }
+
+  .btn-baca {
+    margin-left: 0;
+  }
+
+  .aksi span {
+    text-align: center;
+  }
+
+  aside {
+    padding: 18px;
+  }
+
+  #Tentang {
+    padding: 18px;
+  }
+
+  #kontak {
+    padding: 25px 15px;
+  }
+
+}
+
+
+/* =========================================================
+   HP KECIL
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  #navigasi a,
+  #tombol-gelap {
+    font-size: 11px;
+
+    padding: 6px 8px;
+  }
+
+  article {
+    padding: 14px;
+  }
+
+  #cari {
+    font-size: 14px;
+  }
+
+}
